@@ -25,10 +25,10 @@ This project was completed individually as part of the Columbia Engineering Data
 
 ## 📁 Data Sources
 
-- **Big Five Personality Test Responses**
+- **Big Five Personality Test Responses**  
   Source: [OpenPsychometrics Raw Data](https://openpsychometrics.org/_rawdata/)
 
-- **AKC Dog Trait Data**
+- **AKC Dog Trait Data**  
   Source: [Kaggle - Dog Breed Traits](https://www.kaggle.com/datasets)
 
 ---
@@ -86,18 +86,17 @@ This project was completed individually as part of the Columbia Engineering Data
 🎯 Your dog personality type is: Brainy Pup
 
 🐶 Based on your personality, you're most like one of these dog breeds:
-• Poodle
-• Shetland Sheepdog
+• Poodle  
+• Shetland Sheepdog  
 • Papillon
-
 
 ---
 
 ## 📈 PCA Interpretation
 
-- **PC1** (X-axis): Sociability & Warmth
+- **PC1** (X-axis): Sociability & Warmth  
   Influenced by high Extraversion and Agreeableness
-- **PC2** (Y-axis): Emotional Intensity vs. Creativity
+- **PC2** (Y-axis): Emotional Intensity vs. Creativity  
   Contrasts high Neuroticism + Conscientiousness with low Openness
 
 Most real people clustered around Balanced All-Rounder and Brainy Pup types.
@@ -109,7 +108,7 @@ Most real people clustered around Balanced All-Rounder and Brainy Pup types.
 | Model                | Accuracy |
 |----------------------|----------|
 | K-Nearest Neighbors  | 75.83%   |
-| Logistic Regression  | **80.83%** ✅ |
+| Logistic Regression  | **80.83% ✅** |
 | Random Forest        | 75.42%   |
 
 ---
@@ -128,3 +127,32 @@ Liaman Aghayeva
 
 ---
 
+## 🗂️ File Structure & Usage Instructions
+
+This project contains two main Jupyter notebooks that should be run in order:
+
+```text
+Project_4/
+├── 01_dog_traits_cleaning.ipynb           # Cleans and labels AKC dog breed data
+├── 02_model_training_and_prediction.ipynb # Trains models, generates predictions, and shows visualizations
+├── data/
+│   └── akc_dog_traits.csv                 # Original AKC dog trait data
+├── visuals/
+│   ├── pca_dog_type_clusters.png
+│   ├── pca_kmeans_clusters.png
+│   └── pca_overlay_real_people.png
+├── README.md
+
+```
+### ▶️ How to Run
+
+1. Open `01_dog_traits_cleaning.ipynb`  
+   - Cleans and processes the AKC trait data  
+   - Assigns dog types to each breed  
+   - Maps each type to a synthetic OCEAN personality profile
+
+2. Then run `02_model_training_and_prediction.ipynb`  
+   - Generates synthetic training data  
+   - Trains and evaluates models  
+   - Displays visualizations  
+   - Accepts user input to predict dog personality type and matching breeds
